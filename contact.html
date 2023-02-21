@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
     <title>Liam Pewton</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("1rJj41QxUZANMgIkN");
+   })();
+</script>
+
 </head>
 
 <body>
@@ -61,10 +70,10 @@
             </div>
         </div>
         <div class="center-form">
-            <form>
+            <form onsubmit="return sendMail(this);">
                 <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required>
                 <input type="email" name="email" id="email-address" class="form-control" placeholder="Email" required>
-                <textarea name="project-summary" id="project-summary" rows="5" class="form-control"
+                <textarea name="projectsummary" id="project-summary" rows="5" class="form-control"
                     placeholder="Project Description" required></textarea>
                 <div class="form-row text-center">
                     <div class="col">
@@ -109,6 +118,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/send-email.js"></script>
 </body>
 
 </html>
